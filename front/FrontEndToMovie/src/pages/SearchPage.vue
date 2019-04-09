@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page">
         <Header></Header>
         <div class="content">
             <h3>Результаты поиска по запросу: <b>{{$route.params.query}}</b></h3>
