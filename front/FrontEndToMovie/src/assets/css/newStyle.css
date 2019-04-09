@@ -1,7 +1,7 @@
 .content {
     background-color: #f4f5f7;
     width: 60%;
-    height: 1000px;
+    min-height: 100vh;
     margin: auto;
     padding: 50px;
     color: #32325d

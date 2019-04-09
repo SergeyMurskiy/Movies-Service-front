@@ -8,7 +8,7 @@
                 <div class="description-item"><b>Год: </b> {{film.year}}</div><hr>
                 <div class="description-item"><b>Страна: </b> {{film.country}}</div><hr>
                 <div class="description-item"><b>Жанр: </b> {{film.genre}}</div><hr>
-                <div class="description-item"><b>Режиссер: </b> </div><hr>
+                <div class="description-item"><b>Режиссер: </b> <span class="directors" v-for="director in film.directors">{{director.name}}</span></div><hr>
                 <div class="description-item"><b>Дата выхода: </b> {{film.release}}</div><hr>
                 <div class="description-item"><b>Бюджет: </b> {{film.budget}}</div><hr>
             </div>
@@ -48,5 +48,10 @@
     .description {
         margin-top: 25px;
         font-size: 15px;
+    }
+    .directors {
+
+        float: right;
+        margin-right: 52%;
     }
 </style>

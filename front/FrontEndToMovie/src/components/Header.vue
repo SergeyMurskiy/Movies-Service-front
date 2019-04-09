@@ -1,4 +1,5 @@
 <template>
+    <div>
     <div style="position: relative">
         <base-nav type="default" effect="dark" expand>
             <a class="logo navbar-brand" href="#">Movies Service</a>
@@ -17,7 +18,8 @@
             </div>
             <div class="search-nav">
                 <form @submit="search">
-                    <base-input placeholder="Поиск" v-model="searchQuery" addon-right-icon="ni ni-zoom-split-in"></base-input>
+                    <base-input placeholder="Поиск" v-model="searchQuery"
+                                addon-right-icon="ni ni-zoom-split-in"></base-input>
                 </form>
             </div>
             <div v-if="authorization === null"><a class="nav-link nav-link-icon" href="#">
@@ -27,6 +29,8 @@
                 <user-profile></user-profile>
             </div>
         </base-nav>
+    </div>
+    <sidebar></sidebar>
     </div>
 </template>
 
@@ -45,7 +49,7 @@
         data() {
             return {
                 authorization: '',
-                searchQuery : ''
+                searchQuery: ''
             }
         },
         mounted() {
